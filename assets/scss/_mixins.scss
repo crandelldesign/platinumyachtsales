@@ -1,0 +1,101 @@
+// Mixins
+
+// Box Shadows
+@mixin box-shadow($level) {
+  @if $level == 1 {
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+  } @else if $level == 2 {
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+  } @else if $level == 3 {
+    box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
+  } @else if $level == 4 {
+    box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
+  } @else if $level == 5 {
+    box-shadow: 0 19px 38px rgb(0 0 0 / 30%), 0 15px 12px rgb(0 0 0 / 22%);
+  }
+}
+
+// Transitions
+@mixin transition($transition...) {
+  @if length($transition) == 0 {
+    transition: $transition-base;
+  } @else {
+    transition: $transition;
+  }
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+// Color Swatches
+@mixin swatch($swatches...) {
+  @each $swatch in $swatches {
+    $i: index($swatches, $swatch);
+    &.swatch#{$i} {
+      background-color: $swatch;
+    }
+  }
+}
+
+// Buttons
+@mixin button-size($padding-y, $padding-x, $font-size, $border-radius) {
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  border-radius: $border-radius;
+}
+
+// Paragraph Sizing
+@mixin paragraph-sizing() {
+  max-width: $max-width;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  font-size: 1.25rem; // 20px
+  @media (min-width: $grid-md) {
+    margin-right: 4rem;
+
+    // padding: 0 4rem; // 64px
+    margin-left: 4rem;
+  }
+  @media (min-width: $grid-lg) {
+    margin-right: 6rem;
+
+    // padding: 0 6rem; // 96px
+    margin-left: 6rem;
+  }
+}
+
+@mixin hide-element() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  word-wrap: normal !important;
+  border: 0;
+}
+
+// Border Radius
+@mixin border-radius($radius: $border-radius, $fallback-border-radius: false) {
+  @if $enable-rounded {
+    border-radius: valid-radius($radius);
+  }
+  @else if $fallback-border-radius != false {
+    border-radius: $fallback-border-radius;
+  }
+}
+@mixin border-start-radius($radius: $border-radius) {
+  @if $enable-rounded {
+    border-top-left-radius: valid-radius($radius);
+    border-bottom-left-radius: valid-radius($radius);
+  }
+}
+@mixin border-end-radius($radius: $border-radius) {
+  @if $enable-rounded {
+    border-top-right-radius: valid-radius($radius);
+    border-bottom-right-radius: valid-radius($radius);
+  }
+}

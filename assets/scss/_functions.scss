@@ -1,0 +1,56 @@
+/* stylelint-disable scss/at-if-no-null */
+// Functions
+
+@function add($value1, $value2, $return-calc: true) {
+  @if $value1 == null {
+    @return $value2;
+  }
+
+  @if $value2 == null {
+    @return $value1;
+  }
+
+  @if type-of($value1) == number and type-of($value2) == number and comparable($value1, $value2) {
+    @return $value1 + $value2;
+  }
+
+  @return if($return-calc == true, calc(#{$value1} + #{$value2}), $value1 + unquote(' + ') + $value2);
+}
+
+// Color contrast
+@function color-yiq($color, $dark: $yiq-text-dark, $light: $yiq-text-light) {
+  $r: color.red($color);
+  $g: color.green($color);
+  $b: color.blue($color);
+  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) * 0.001;
+
+  @if $yiq >= $yiq-contrasted-threshold {
+    @return $dark;
+  } @else {
+    @return $light;
+  }
+}
+
+// Helper function to replace negative values with 0
+@function valid-radius($radius) {
+  $return: ();
+  @each $value in $radius {
+    @if type-of($value) == number {
+      $return: append($return, max($value, 0));
+    } @else {
+      $return: append($return, $value);
+    }
+  }
+  @return $return;
+}
+
+// scss-docs-start color-functions
+// Tint a color: mix a color with white
+@function tint-color($color, $weight) {
+  @return mix(white, $color, $weight);
+}
+
+// Shade a color: mix a color with black
+@function shade-color($color, $weight) {
+  @return mix(black, $color, $weight);
+}

@@ -1,0 +1,44 @@
+// Colors
+$black: #000;
+$white: #FFF;
+
+$body-color: $black;
+$body-bg: $white;
+
+// Spacer
+$spacer: 1rem;
+
+// Typography
+$font-family-base: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+
+$font-weight-lighter:         lighter;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-medium:          500;
+$font-weight-semibold:        600;
+$font-weight-bold:            700;
+$font-weight-bolder:          bolder;
+
+$font-weight-base:            $font-weight-normal;
+$line-height-base:            1.5;
+
+$h1-font-size:                $font-size-base * 2.5;
+$h2-font-size:                $font-size-base * 2;
+$h3-font-size:                $font-size-base * 1.75;
+$h4-font-size:                $font-size-base * 1.5;
+$h5-font-size:                $font-size-base * 1.25;
+$h6-font-size:                $font-size-base;
+
+$headings-margin-bottom:      $spacer * .5;
+$headings-font-family:        "Michroma", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$headings-font-style:         null;
+$headings-font-weight:        400;
+$headings-line-height:        1.2;
+$headings-color:              inherit;
+
+// Boostrap Stuff
+// Prefix for :root CSS variables
+
+$variable-prefix: bs-; // Deprecated in v5.2.0 for the shorter `$prefix`
+$prefix: $variable-prefix;
