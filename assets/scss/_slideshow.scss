@@ -1,11 +1,17 @@
 .slideshow-container {
   // --swiper-navigation-color: $white;
+  border-bottom: 2px solid $gold;
   .swiper-slide {
     position: relative;
     img {
       width: 100%;
       height: auto;
       display: block;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      @media (min-width: $grid-md) {
+        aspect-ratio: auto;
+      }
     }
     .slide-caption {
       width: 100%;
