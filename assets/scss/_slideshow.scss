@@ -1,0 +1,23 @@
+.slideshow-container {
+  // --swiper-navigation-color: $white;
+  .swiper-slide {
+    position: relative;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .slide-caption {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      background-color: rgba($color: $black, $alpha: 0.5);
+      color: $white;
+      text-align: center;
+      padding: 1rem 1rem 1.5rem 1rem; // 16px 24px
+      h2 {
+        font-size: 1.125rem; // 18px
+      }
+    }
+  }
+}

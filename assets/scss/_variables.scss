@@ -1,9 +1,18 @@
 // Colors
 $black: #000;
 $white: #FFF;
+$gold: #ce8e00;
 
 $body-color: $black;
 $body-bg: $white;
+
+// Breakpoints
+$grid-xs: 0;
+$grid-sm: 576px;
+$grid-md: 768px;
+$grid-lg: 992px;
+$grid-xl: 1200px;
+$grid-xxl: 1400px;
 
 // Spacer
 $spacer: 1rem;
@@ -36,6 +45,8 @@ $headings-font-style:         null;
 $headings-font-weight:        400;
 $headings-line-height:        1.2;
 $headings-color:              inherit;
+
+$paragraph-margin-bottom: $spacer;
 
 // Boostrap Stuff
 // Prefix for :root CSS variables

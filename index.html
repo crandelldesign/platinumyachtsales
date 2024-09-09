@@ -9,12 +9,72 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link href="assets/css/stylesheet.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Platinum Yacht Sales!</h1>
 
-    <p>There are lots of different sources and dealers available for selling your boat but there is no other Brokerage company like Platinum Yacht Sales. With over 50 years of experience, there is a reason Platinum is known as the Brokerage Specialists. Platinum is a small company with extensive knowledge of the Marine Industry, which means more individual attention to <em>your</em> sale with a much faster turnaround for both the Buyer and the Seller. Platinum also offers expert Financing, Insurance and Documentation Services, which helps expedite the entire process. From start to finish, Platinum will get the job done for you with the utmost professionalism. We look forward to the sale of your boat!</p>
-    <p>For more Information on Listing your boat with Platinum, contact us at: <a href="mailto:Sales@PlatinumYachtSales.com">Sales@PlatinumYachtSales.com</a></p>
+    <header class="header">
+      <div class="logo-container">
+        <img src="assets/img/logo.svg" alt="Platinum Yacht Sales" />
+      </div>
+    </header>
+    
+    <!-- <h1>Platinum Yacht Sales</h1> -->
+
+    <div class="slideshow-container">
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+
+            <img src="assets/img/sea-ray-l650-fly.jpg" alt="Sea Ray L650 FLY" />
+
+            <div class="slide-caption">
+              <h2>Sea Ray L650 FLY</h2>
+              <p> True inspired luxury with a breathtaking style!</p>
+            </div>
+
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/2011-sea-ray-470-sundancer.jpg" alt="2011 Sea Ray 470 Sundancer" />
+            <div class="slide-caption">
+              <h2>2011 Sea Ray 470 Sundancer</h2>
+              <p>Combining the powerful styling and lush accommodations.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/sea-ray-470-sundancer.jpg" alt="Sea Ray 470 Sundancer" />
+            <div class="slide-caption">
+              <h2>Sea Ray 470 Sundancer</h2>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+    
+
+    <main class="page">
+      <p>There are lots of different sources and dealers available for selling your boat but there is no other Brokerage company like Platinum Yacht Sales. With over 50 years of experience, there is a reason Platinum is known as the Brokerage Specialists. Platinum is a small company with extensive knowledge of the Marine Industry, which means more individual attention to <em>your</em> sale with a much faster turnaround for both the Buyer and the Seller. Platinum also offers expert Financing, Insurance and Documentation Services, which helps expedite the entire process. From start to finish, Platinum will get the job done for you with the utmost professionalism. We look forward to the sale of your boat!</p>
+      <p>For more Information on Listing your boat with Platinum, contact us at: <a href="mailto:Sales@PlatinumYachtSales.com">Sales@PlatinumYachtSales.com</a></p>
+    </main>
+
+    <footer class="footer">
+      &copy; 2024 Boats Group All Rights Reserved
+    </footer>
   </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+
 </html>

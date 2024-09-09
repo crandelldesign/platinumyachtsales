@@ -1,0 +1,17 @@
+// Header
+header.header {
+  border-bottom: 2px solid $gold;
+  padding: 1rem; // 16px
+  @media (min-width: $grid-md) {
+    padding: 2rem; // 32px
+  }
+}
+.logo-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
